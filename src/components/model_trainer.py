@@ -52,6 +52,7 @@ class ModelTrainer:
             if best_model_score<0.6:
                 raise CustomExcepion("No best model found",sys)
             logging.info('Models and trained and ready for evaluation')
+            logging.info('best model name is [{0}] and its score is [{1}]'.format(best_model_name,best_model_score))
             save_object(
                 file_path=self.model_trainer_config.trained_model_file_path,
                 obj=best_model
